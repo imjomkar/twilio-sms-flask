@@ -74,7 +74,7 @@ ngrok http 5000
 This will give you a public URL like:
 
 ```
-https://abc123.ngrok.io
+https://xxxxx.free.app
 ```
 
  
@@ -86,7 +86,7 @@ https://abc123.ngrok.io
 3. Under **Messaging > A MESSAGE COMES IN**, set the webhook to:
 
 ```
-https://abc123.ngrok.io/sms
+https://xxxxx.free.app/sms
 ```
 
 4. Use `POST` as the method
@@ -99,7 +99,7 @@ https://abc123.ngrok.io/sms
 To simulate an incoming message without a phone:
 
 ```bash
-curl -X POST https://abc123.ngrok.io/sms \
+curl -X POST https://xxxxx.free.app/sms \
   -d "From=+1234567890" \
   -d "Body=Hello from curl"
 ```
@@ -126,7 +126,7 @@ def sms_reply():
     return str(resp)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(port=5000, debug=True)
 ```
 
 
